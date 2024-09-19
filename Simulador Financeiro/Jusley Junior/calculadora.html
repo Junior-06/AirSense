@@ -1,0 +1,76 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+
+<body>
+    <div class="centered-box">
+        <div class="lado-esquerdo">
+            <h1 class="logo">Calculadora Financeira</h1>
+        </div>
+        <div class="lado-direito">
+            <div class="lista-info">
+                <div class="perguntas">Informe o valor médio de manutenção dos seus compressores:</div>
+                <input id="manutencao" class="input" placeholder="digite aqui"><br>
+                
+                <div class="perguntas">Informe quantos compressores sua empresa tem:</div>
+                <input id="maquinas" class="input" placeholder="digite aqui"><br>
+                
+                <div class="perguntas">A cada quantos meses é feita manutenção dos compressores:</div>
+                <input id="frequencia" class="input" placeholder="digite aqui"><br>
+
+                <button onclick="calcular()" id="button_pergunta" class="button">Calcular Economia</button>
+                
+                <div id="resultado"></div>
+                <div id="resultadoDica"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function calcular() {
+        const Valor_ma = Number(manutencao.value)
+        const N_maquinas = Number(maquinas.value)
+        const economia_sensor = 0.35
+        const N_frequencia = Number(frequencia.value)
+        const medio_manutencao = 1000
+        const medio_corretiva = 5000
+        const valor_gasto = Valor_ma * N_maquinas
+        var economizara = valor_gasto + (medio_corretiva * N_maquinas) 
+        var total_desc = economizara - valor_gasto  
+        // manutenção preventiva 5000 a 15000, corretiva é de 15 a 50 mil
+        
+
+        if (N_frequencia > 2) {
+            const valor_gasto = Valor_ma * N_maquinas
+            const valor_gasto_ano = valor_gasto * (12 / N_frequencia)           
+            var excedente = valor_gasto_ano - medio_manutencao
+
+            resultado.innerHTML = `sua empresa esta gastando ${valor_gasto_ano} ao ano em manutenções, parece que você esta fazendo mais manutenções que a media em seus compressores 
+            problemas causados pelo excesso de umidade e calor podem estar ocasionando isso, esta gastando R$${excedente}
+             a mais em manutenções por ano do que o necessario.`
+        }
+        else {
+            const valor_gasto = Valor_ma * N_maquinas
+            var gasto_final = total_desc - medio_corretiva
+            resultado.innerHTML = `sua empresa esta gastando R$${total_desc} ao ano em manutenções, parece que você não esta fazendo o numero de manutenções esperadas em seus compressores,
+             problemas podem acontecer causados pelo excesso de umidade e calor no equipamento, podendo gerar gastos diretos
+            de mais R$${gasto_final} ao ano.`
+
+        }
+
+        resultadoDica.innerHTML = `Com a inserção dos nossos sensores você economizara um total de R$${economizara}.`
+
+    }
+
+
+</script>

@@ -19,7 +19,7 @@
     </div>
 
     <script>
-        var sensorDHT11 = new Chart(document.getElementById('sensorDHT11').getContext('2d'), {
+        var sensorUmi = new Chart(document.getElementById('sensorDHT11').getContext('2d'), {
             type: 'line',
             data: {
                 datasets: [{
@@ -44,7 +44,7 @@
             }
         });
 
-        var sensorDigital = new Chart(document.getElementById('sensorLM35').getContext('2d'), {
+        var sensorTemp = new Chart(document.getElementById('sensorLM35').getContext('2d'), {
             type: 'line',
             data: {
                 datasets: [{
@@ -86,6 +86,7 @@
                     var ultimaPaginacao = paginacao[endpoint];
                     paginacao[endpoint] = valores.length;
                     valores = valores.slice(ultimaPaginacao);
+                    console.log(valores);
 
                     valores.forEach((valor) => {
                         if (grafico.data.labels.length == 10 && grafico.data.datasets[0].data.length == 10) {
@@ -102,8 +103,8 @@
         }
 
         setInterval(() => {
-            obterDados(sensorDHT11, 'umidade');
-            obterDados(sensorLM35, 'temperatura');
+            obterDados(sensorTemp,'temperatura');
+            obterDados(sensorUmi,'umidade');
         }, 1000);
 
     </script>

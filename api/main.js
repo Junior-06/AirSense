@@ -8,7 +8,7 @@ const SERIAL_BAUD_RATE = 9600;
 const SERVIDOR_PORTA = 3300;
 
 // habilita ou desabilita a inserção de dados no banco de dados
-const HABILITAR_OPERACAO_INSERIR = false;
+const HABILITAR_OPERACAO_INSERIR = true;
 
 // função para comunicação serial
 const serial = async (
@@ -19,10 +19,10 @@ const serial = async (
     // conexão com o banco de dados MySQL
     let poolBancoDados = mysql.createPool(
         {
-            host: 'HOST_DO_BANCO',
-            user: 'USUARIO_DO_BANCO',
-            password: 'SENHA_DO_BANCO',
-            database: 'DATABASE_DO_BANCO',
+            host: 'localhost',
+            user: 'api',
+            password: 'urubuapi100',
+            database: 'api',
             port: 3306
         }
     ).promise();
@@ -51,12 +51,12 @@ const serial = async (
     arduino.pipe(new serialport.ReadlineParser({ delimiter: '\r\n' })).on('data', async (data) => {
         console.log(data);
         const valores = data.split(';');
-        const sensorLM35 = parseInt(valores[0]);
-        const sensorDHT11 = parseFloat(valores[1]);
+        const temperatura = parseInt(valores[0]);
+        const umidade = parseFloat(valores[1]);
 
         // armazena os valores dos sensores nos arrays correspondentes
-        valoresSensorLM35.push(sensorLM35);
-        valoresSensorDHT11.push(sensorDHT11);
+        valoresSensorLM35.push(temperatura);
+        valoresSensorDHT11.push(umidade);
         
 
         // insere os dados no banco de dados (se habilitado)
@@ -64,10 +64,10 @@ const serial = async (
 
             // este insert irá inserir os dados na tabela "medida"
             await poolBancoDados.execute(
-                'INSERT INTO medida (sensor_analogico, sensor_digital) VALUES (?, ?)',
-                [sensorAnalogico, sensorDigital]
+                'INSERT INTO dadosSensor (temperatura, umidade) VALUES (?, ?)',
+                [temperatura, umidade]
             );
-            console.log("valores inseridos no banco: ", sensorAnalogico + ", " + sensorDigital);
+            console.log("valores inseridos no banco: ", temperatura + ", " + umidade);
 
         }
 

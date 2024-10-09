@@ -70,7 +70,66 @@ VALUES
 VALUES 
   ('AutoMec Sistemas Pneumáticos', 'São Bernardo do Campo', 'Rua Industrial', '1001', 1, 1),
   ('PneumáticaTech', 'São Caetano do Sul', 'Av. Automobilística', '2020', 2, 2);
-
+  
+  SELECT * FROM informaçõesSistema;
+  SELECT * FROM sensor;
+  SELECT * FROM leituraAmbiente;
+  SELECT * FROM Usuario;
+  SELECT * FROM Empresa;
+  
+  SELECT 
+    e.idEmpresa,
+    e.nomeEmpresa,
+    e.cidade,
+    e.rua,
+    e.numero,
+    u.nomeUsuario AS 'Nome do Responsavel',
+    u.emailContato,
+    u.telefoneContato,
+    i.nomeSubSistema,
+    i.localização,
+    s.tipoSensor,
+    s.posicao,
+    la.dtHora_medicao,
+    la.temperatura,
+    la.umidade
+FROM 
+    Empresa e
+JOIN 
+    Usuario u ON e.fkResponsavel = u.idUsuario
+JOIN 
+    informaçõesSistema i ON e.fkInformaçõesSistema = i.idInformaçõesSistema
+JOIN 
+    sensor s ON i.idInformaçõesSistema = s.fkSubSis
+JOIN 
+    leituraAmbiente la ON i.idInformaçõesSistema = la.fkSubSistema AND s.idSensor = la.fkSensor;
+    
+   SELECT *
+FROM 
+    Usuario u
+JOIN 
+    Empresa e ON u.idUsuario = e.fkResponsavel;
+    
+    SELECT 
+    s.idSensor,
+    s.tipoSensor,
+    s.posicao,
+    i.idInformaçõesSistema,
+    i.nomeSubSistema,
+    i.localização,
+    la.idLeituraAmbiente,
+    la.dtHora_medicao,
+    la.temperatura,
+    la.umidade
+FROM 
+    sensor s
+JOIN 
+    informaçõesSistema i ON s.fkSubSis = i.idInformaçõesSistema
+JOIN 
+    leituraAmbiente la ON i.idInformaçõesSistema = la.fkSubSistema AND s.idSensor = la.fkSensor;
+    
+  
+  
 
  
 

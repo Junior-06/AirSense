@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AIRSENSE</h1>
+            <div class="user">
+                <div class="username"></div>
+                <div class="user-icon">
+                    <img src="imgs/user-icon.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section-main">
+        <div class="container">
+            <div class="top">
+                <div class="kpi card intervaloIdeal">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="imgs/IntervaloIdeal-icon.svg" alt="">
+                        </div>
+                        <h4>Tempo fora do intervalo ideal</h4>
+                    </div>
+                    <h2 id="">0s</h2>
+                </div>
+                <div class="kpi card frequencia">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="imgs/frequencia-icon.svg" alt="">
+                        </div>
+                        <h4>Frequência fora do ideal</h4>
+                    </div>
+                    <h2 id="">00%</h2>
+                </div>
+                <div class="kpi card mediaTemp">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="imgs/temperatura-icon.svg" alt="">
+                        </div>
+                        <h4>Média Temperatura</h4>
+                    </div>
+                    <h2 id="">0C°</h2>
+                </div>
+                <div class="kpi card maxMinTemp">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="imgs/temperatura-icon.svg" alt="">
+                        </div>
+                        <h4>Máxima / Mínima</h4>
+                    </div>
+                    <h2 id="">0C°/0C°</h2>
+                </div>
+                <div class="kpi card mediaUmi">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="imgs/umidade-icon.svg" alt="">
+                        </div>
+                        <h4>Máxima / Mínima</h4>
+                    </div>
+                    <h2 id="">00%/00%</h2>
+                </div>
+                <div class="kpi card maxMinUmi">
+                    <div class="label">
+                        <div class="icon">
+                            <img src="imgs/umidade-icon.svg" alt="">
+                        </div>
+                        <h4>Média Umidade</h4>
+                    </div>
+                    <h2 id="">00%</h2>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <div class="sensores card">
+                        <div class="text">
+                            <h3>Dados</h3>
+                        </div>
+                        <select>
+                            <option value="">Todos os sensores</option>
+                            <option value="">AirSense #1</option>
+                        </select>
+                    </div>
+                    <div class="alert card">
+                        <div class="text">
+                            <img src="imgs/bell-icon.svg" alt="">
+                            <h3>Notificações</h3>
+                        </div>
+                        <div class="alert-status">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="grafico card">
+                    <canvas id="grafico-temperatura"></canvas>
+                </div>
+                <div class="grafico card">
+                    <canvas id="grafico-umidade"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

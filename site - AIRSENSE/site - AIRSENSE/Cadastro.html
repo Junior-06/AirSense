@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários | AirSense</title>
+    <link rel="stylesheet" href="../site - AIRSENSE/styles/CadastroLogin.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AIRSENSE</h1>
+          <a href="Perfil.html"><p>Perfil</p></a>
+          <a href="SobreNos.html"><p>Sobre nós</p></a>
+          <a href="airsense.html"><p>Página Inicial</p></a>
+          <a href="Sensores.html"><p>Sensores</p></a>
+          <a href="Login.html"><p>Login</p></a>
+        </div>
+    </div>
+    </header>
+    <div class="banner">
+        <div class="FundoLoginCadastro">
+            <h1>CADASTRO</h1>
+            <div class="icon">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="User Icon"> 
+            </div>
+    
+            <input type="text" placeholder="Digite seu nome" id="InpNomeUsuario">   
+            <input type="text" placeholder="Digite um nome de usuário" id="InpUsuario">  
+            <input type="email" placeholder="Digite um email" id="InpEmailUsuario"> 
+            <input type="password" placeholder="Digite uma senha" id="InpSenhaUsuario">
+    
+            <button type="submit" onclick="CadastroUsuario()">
+                CADASTRAR
+                <img src="arrow-icon.png" alt="Arrow Icon">
+            </button>
+        </div>
+    </div>
+   
+</body>
+</html>
+
+<script>
+    function CadastroUsuario() {
+        alert('Usuário cadastrado com sucesso!');
+
+        const NomeUsuario = InpNomeUsuario.value
+        console.log(NomeUsuario);
+        const Usuario = InpUsuario.value
+        console.log(Usuario);
+        const EmailUsuario = InpEmailUsuario.value
+        console.log(EmailUsuario);
+        const SenhaUsuario = InpSenhaUsuario.value
+        console.log(SenhaUsuario);
+
+
+        
+    }
+</script>

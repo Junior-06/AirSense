@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../simulador_financeiro/style.css">
+    <title>Simulador Financeiro - AirSense</title>
+</head>
+
+<body>
+    <header>
+        <h1>AirSense</h1>
+
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="Simulador.html">Sobre nós</a>
+            <a href="projetos.html">Nossos Projetos</a>
+            <a href="sensores.html">Sensores</a>
+        </nav>
+    </header>
+
+    <div class="Banner">
+        <div class="Resposta">
+            <div class="Resultado" id="div_resultado">
+                <h2>Bem-vindo(a) à sua simulação financeira.</h2>
+                <h4>Para começarmos, pedimos que você informe o seu nome:</h4>
+                <input id="input_nome" type="text"> <br>
+                <h4>Agora, precisamos que você coloque a média de carros que sua fábrica produz: (por dia)</h4>
+                <input id="input_qtd_carros" type="number"> <br>
+                <h4>Por fim, precisamos que você coloque a média de preço dos carros da sua fábrica:</h4>
+                <input id="input_preco" type="number"> <br><br>
+                <button onclick="VerSimulacao()">Ver a minha simulação</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h1>AirSense</h1>
+        <div class="textos">
+            <p>Precisa de ajuda?</p> <br>
+            <i>Entre em contato conosco: <br>
+                Airsense.company@gmail.com</i>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function VerSimulacao() {
+        const Nome = input_nome.value;
+        const qtdCarros = Number(input_qtd_carros.value);
+        const precoMedio = Number(input_preco.value);
+
+        if (Nome>0 && qtdCarros > 0 && precoMedio > 0) {
+
+            var ReceitapDia = precoMedio * qtdCarros;
+            var PrecoHora = ReceitapDia / 24;
+
+
+            var Prejuizo2h = PrecoHora * 2;
+            var Prejuizo5h = PrecoHora * 5;
+            var Prejuizo10h = PrecoHora * 10;
+
+
+            div_resultado.innerHTML = `<h1>Olá, ${Nome}!</h1> 
+                  <p>Nossa equipe da AirSense analisou o seu caso e, com base nas informações fornecidas, apresentamos os seguintes cenários de impacto financeiro em caso de parada das suas máquinas pneumáticas:</p>
+                  
+                  <h4>Cenário de 2 horas de parada:</h4>
+                  <p>Se suas máquinas ficarem paradas por 2 horas, o prejuízo estimado será de <strong>${Prejuizo2h.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong>.</p>
+                  
+                  <h4>Cenário de 5 horas de parada:</h4>
+                  <p>Se a paralisação durar 5 horas, o impacto financeiro sobe para <strong>${Prejuizo5h.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong>.</p>
+                  
+                  <h4>Cenário de 10 horas de parada:</h4>
+                  <p>Em um cenário crítico de 10 horas de inatividade, sua empresa enfrentaria um prejuízo estimado de <strong>${Prejuizo10h.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</strong>.</p>
+                  
+                  <p>Esses valores demonstram a importância de manter suas máquinas monitoradas para evitar prejuízos e garantir a continuidade da produção.</p>`;
+        } else {
+            alert('Por favor, preencha todos os campos corretamente.');
+        }
+    }
+</script>

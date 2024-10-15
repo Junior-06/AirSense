@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+
+
+}
+
+header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkblue;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.navbar {
+    flex-direction: row;
+    margin-left: 30px;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
+button{
+    color: black;
+    background-color: yellow;
+    height: 70px;
+    width: 200px;
+    border-radius: 10%;
+    font-size: large;
+}
+h4{
+    font-size: large;
+}
+h2{
+    color: black;
+}
+h1{
+    color: aqua;
+    height: 40px;
+    width: 40px;
+}
+a{
+    flex-direction: row;
+    margin-left: 30px;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center; 
+    color: white;
+}
+.Banner{
+    height: 750px;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://static.poder360.com.br/2017/05/veiculos_agbr-848x477.jpg) ;
+    background-repeat: no-repeat;
+    background-size:cover ;
+    margin: 0;
+}
+.footer{
+    color: white;
+    background-color: blue;
+  
+    height: 112px;
+    margin: 0;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    gap: 30px;
+ 
+
+}
+.Resposta{
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   height: 700px;
+   width: 600px;
+   border-radius: 10%;
+margin: 20px;
+color: black;
+
+}
+.Resultado{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: space-between;
+    gap: 5px;
+    padding: 00px 20px;
+   
+}
+input{
+    height: 30px;
+    width: 300px;
+}
+.Resultado h1{
+    color:black
+}

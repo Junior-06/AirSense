@@ -1,6 +1,7 @@
 header {
     height: 88px;
     background-color: var(--navy);
+    border-bottom: 2px solid var(--orange);
 }
 
 header .logo {

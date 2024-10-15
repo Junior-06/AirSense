@@ -25,24 +25,14 @@
     font-size: 22px;  
 }
 
-#sobre-nos {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: center;
-    padding: 200px; 
-    width: 100%; 
-    margin: 0; 
-    background-color: var(--cyan);
-   
-}
+
 
 .info-section h3  {
     float: right;
     text-align: right;
     display: flex;
     justify-content: flex-end;
-    
-    
+    color: #E6E4E9;
 }
 
 .info-section p {
@@ -50,7 +40,7 @@
     text-align: right;
     display: flex;
     justify-content: flex-end;
-    
+    font-size: 18px;
 }
 
 .nos .img_nos {
@@ -59,11 +49,22 @@
     border-radius: 50%;
     border: 4px solid  var(--orange);
     display: none;
+    background-image: ('img/imagem_testar.png');
 }
 
-.teste .img_testar {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 4px;
+.info-section {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 40px;
+    text-align: center; 
+    background-color: var(--cyan);
+}
+
+
+.img_testar {
+    width: 200px; 
+    height: 200px; 
+    margin-bottom: 20px; 
+    border-radius: 50%; 
 }

@@ -28,25 +28,70 @@
                 <li>
                     <a href="sensores.html">Sensores</a>
                 </li>
-                <li> 
-                    <a href="Cadastro.html">Cadastro</a>
-                </li>
             </ul>
         </div>
     </header>
     <section class="section-main">
         <div class="container">
             <div class="cadastro metade">
-                <input type="text">
+                <div class="form">
+                    <h2 class="text-cadastro">Cadastro</h2>
+                    <div class="empresa-nome campo">
+                        <h4>Nome da Empresa: </h4>
+                        <input class="input" type="text">
+                    </div>
+    
+                    <div class="empresa-email campo">
+                        <h4>Email Empresarial: </h4>
+                        <input class="input" type="email">
+                    </div>
+                    <div class="empresa-cnpj campo">
+                        <h4>CNPJ: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-phone campo">
+                        <h4>Telefone: </h4>
+                        <input class="input" type="tel">
+                    </div>
+                    <div class="empresa-cep campo">
+                        <h4>CEP: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-uf campo">
+                        <h4>Cidade: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-rua campo">
+                        <h4>Rua: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-num campo">
+                        <h4>Número: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-bairro campo">
+                        <h4>Bairro: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-complemento campo">
+                        <h4>Complemento:     </h4>
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <br>
+                    
+                    <button class="button" onclick="CadastroCliente()">Cadastrar</button>
             </div>
-            <div class="marketing metade"></div>
+            <div class="marketing metade">
+
+            </div>
         </div>
     </section>
 </body>
 </html>
 
 <script>
-    function CadastroUsuario() {
+    function CadastroCliente() {
         alert('Cliente cadastrado com sucesso!');
 
         const NomeUsuario = InpNomeUsuario.value

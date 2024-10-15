@@ -1,0 +1,40 @@
+.banner .container {
+    height: 600px;
+    border: 2px white;
+    background-image: url(https://mexico-now.com/wp-content/uploads/2023/07/Plant2-superJumbo.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.banner .text {
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(3.5px);
+    background-color: rgba(8, 5, 15, 0.61);
+}
+
+.banner .text h2 {
+    color: rgb(215, 214, 214);
+    font-size: 68px;   
+}
+
+.banner .text p{
+    color: rgb(215, 214, 214);
+    font-size: 22px;  
+}
+
+.nos .img_nos {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px orange;
+}
+33
+
+.teste .img_testar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px orange;
+}

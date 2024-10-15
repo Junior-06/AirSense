@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Inter" ;   
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+   
+}
+
+.blur-black {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.414);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

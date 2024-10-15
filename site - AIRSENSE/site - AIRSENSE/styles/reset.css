@@ -6,15 +6,27 @@
     outline: none;
     border: none;
     box-sizing: border-box;
-    font-family: "Inter" ;   
+    font-family: "Inter" ;
+    /* Vars*/
+    --navy-dark: #011526;
+    --navy: #012340;
+    --cyan-dark: #294862;
+    --cyan: #3D5A73;
+    --orange: #EC8305;
+    --cinza: #eee;
+    --platinum: #E6E4E9;
+
+}
+
+body {
+    height: 100vh;
+    background-color: var(--platinum);
 }
 
 .container {
     max-width: 1440px;
     margin: 0 auto;
-   
 }
-
 .blur-black {
     height: 100%;
     width: 100%;

@@ -1,7 +1,6 @@
 header {
     height: 88px;
-    background-color: rgb(17, 66, 230);
-    
+    background-color: var(--navy);
 }
 
 header .logo {
@@ -11,13 +10,10 @@ header .logo {
     font-weight: bold;
     transition: 0.3s, ease-in-out;
     transition-property: color;
-    
-
 }
 
 header .logo:hover {
-    color: #ffa500;
-    
+    color: orange;
     
 }
 
@@ -36,7 +32,7 @@ header .navbar a {
 }
 
 header .navbar a:hover {
-    color: #ffa500;
+    color: orange;
     text-shadow: 1px 1px 2px rgb(67, 58, 58);
 }
 

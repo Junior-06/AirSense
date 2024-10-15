@@ -1,3 +1,4 @@
+
 .banner .container {
     height: 600px;
     border: 2px white;
@@ -24,17 +25,45 @@
     font-size: 22px;  
 }
 
+#sobre-nos {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    padding: 200px; 
+    width: 100%; 
+    margin: 0; 
+    background-color: var(--cyan);
+   
+}
+
+.info-section h3  {
+    float: right;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    
+    
+}
+
+.info-section p {
+    float: right;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
 .nos .img_nos {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 2px orange;
+    border: 4px solid  var(--orange);
+    display: none;
 }
-33
 
 .teste .img_testar {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 2px orange;
+    border: 4px;
 }

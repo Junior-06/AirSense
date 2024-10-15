@@ -12,6 +12,10 @@
     color: var(--gray_text, #434343);
 }
 
+body {
+    height: 100vh;
+}
+
 .container {
     height: 100%;
     max-width: 1440px;
@@ -46,11 +50,12 @@ header {
     height: 88px;
     border-bottom: 2px solid #F70;
     background-color: #004AAD;
+    padding: 0 125px;
 }
 
 header .container {
     display: flex;
-    margin: 0 125px;
+    
     align-items: center;
     justify-content: space-between;
 }
@@ -82,6 +87,7 @@ header .user .username {
 }
 
 .section-main {
+    height: calc(100% - 88px);
     background-color: #E6E4E9;
 }
 

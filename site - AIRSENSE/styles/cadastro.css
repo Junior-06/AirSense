@@ -2,14 +2,12 @@ body {
     background-color: white;
 }
 
-section {
-    flex: 1; 
-    display: flex;
-}
 section .container{
     height: 100%;
     display: flex;
     max-width: none;
+    margin: 0;
+    width: 100%;
 }
 
 section .metade {
@@ -19,15 +17,15 @@ section .metade {
 section .cadastro {
     display: flex;
     flex-direction: column;
-    margin: 0 125px;
+    margin: 30px 60px 30px 125px;
     color: var(--navy-dark);
 }
 
 section .cadastro .form {
     width: fit-content;
-    margin: 32px 0;
     display: grid;
     gap: 15px;
+    margin-bottom: 35px;
     column-gap: 50px;
     grid-template-columns: 3fr 1fr 1fr; /* Primeira coluna maior para acomodar campos longos */
     grid-template-areas: 
@@ -69,11 +67,10 @@ section .cadastro .form {
 .empresa-complemento {grid-area: complemento}
     
 section .marketing {
-    background-image: url(../img/img_cadastro.webp);
+    background-image: url(../img/cadastro/cadastro-armRobot.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    
 }
 
 .input {
@@ -88,7 +85,6 @@ section .marketing {
 .input:focus-visible {
     border: 2px solid var(--cyan);
 }
-
 
 .button {
     background-color: #012340;
@@ -106,4 +102,5 @@ section .marketing {
     background-color: #E6E4E9;
     border-color: var(--orange);
     border: 2px solid var(--orange);
+    cursor: pointer;
 }

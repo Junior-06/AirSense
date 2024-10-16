@@ -4,18 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../simulador_financeiro/style.css">
+    <link rel="stylesheet" href="../site - AIRSENSE/styles/style.css">
+    <link rel="stylesheet" href="../">
     <title>Simulador Financeiro - AirSense</title>
 </head>
 
 <body>
     <header>
-        <h1>AirSense</h1>
+        <!--<h1>AIRSENSE</h1><!-->
+        <a class="logo" href="./index.html">AIRSENSE</a>
 
         <nav>
             <a href="login.html">Login</a>
-            <a href="Simulador.html">Sobre nós</a>
-            <a href="projetos.html">Nossos Projetos</a>
+            <a href="sobre_nos.html">Sobre Nós</a>
+            <a href="Cadastro.html">Cadastro</a>
             <a href="sensores.html">Sensores</a>
         </nav>
     </header>
@@ -36,7 +38,7 @@
     </div>
 
     <div class="footer">
-        <h1>AirSense</h1>
+        <h1>AIRSENSE</h1>
         <div class="textos">
             <p>Precisa de ajuda?</p> <br>
             <i>Entre em contato conosco: <br>
@@ -53,7 +55,7 @@
         const qtdCarros = Number(input_qtd_carros.value);
         const precoMedio = Number(input_preco.value);
 
-        if (Nome>0 && qtdCarros > 0 && precoMedio > 0) {
+        if (Nome && qtdCarros > 0 && precoMedio > 0) {
 
             var ReceitapDia = precoMedio * qtdCarros;
             var PrecoHora = ReceitapDia / 24;

@@ -17,8 +17,9 @@ section .metade {
 section .cadastro {
     display: flex;
     flex-direction: column;
-    margin: 30px 60px 30px 125px;
+    margin: 0 60px 0 125px;
     color: var(--navy-dark);
+    justify-content: center;
 }
 
 section .cadastro .form {

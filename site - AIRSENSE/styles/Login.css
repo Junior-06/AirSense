@@ -19,6 +19,12 @@ body {
     justify-content: center;
 }
 
+.eyeIcon{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
 .FundoLogin {
     width: 400px;
     height: 500px;

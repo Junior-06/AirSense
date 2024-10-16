@@ -1,0 +1,70 @@
+.sensor {
+    flex: 1; 
+    background-color: var(--cinza);
+}
+
+.sensor .container {
+    padding: 50px 130px; 
+    max-width: 1300px; 
+    margin: 0;  
+}
+
+.sensor-content {
+    display: flex; /* Flexbox para alinhar imagem e texto */
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+.img_sensor {
+    flex: 0 0 200px; /* Define uma largura fixa para a imagem */
+    margin-right: 88px; /* Espaço entre a imagem e o texto */
+}
+
+.img_sensor img {
+   width: 350px;
+   height: 350px;
+   margin-bottom: 15px;
+}
+
+.sensor-text {
+    flex: 1; 
+    color: white;
+}
+
+.sensor h1 {
+    text-align: left; 
+    font-family: "Montserrat";
+    margin-bottom: 20px; 
+    transition: color 0.3s ease-in-out;
+}
+
+.sensor h1:hover {
+    color: var(--navy-dark);
+}
+
+.linha {
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+    margin: 10px 0;
+}
+
+.sensor p {
+    font-family: inherit;
+    margin-bottom: 10px; 
+    font-size: 14px;
+    text-align: left; 
+}
+.btn-voltar {
+    margin-top: 50px; 
+    padding: 10px 50px; 
+    text-align: center;
+    background-color: var(--navy-dark); 
+    color: white;
+    border-radius: 120px; 
+    font-size: 20px; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-voltar:hover{
+    background-color: var(--orange); 
+}

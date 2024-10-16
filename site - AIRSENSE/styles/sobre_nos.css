@@ -1,0 +1,68 @@
+.nos {
+    height: 550px;
+    flex: 1; 
+    background-color: var(--cinza);
+}
+
+
+.nos .container {
+  padding: 50px 60px; 
+  max-width: 900px; 
+  margin: 0;  
+  bottom: 0; 
+  left: 0; 
+    
+
+}
+.nos h1 {
+    color: white;
+    text-align: left; 
+    font-family: "Montserrat";
+    margin-bottom: 20px; 
+    transition: color 0.3s ease-in-out;
+}
+
+.nos h1:hover {
+    color: var(--navy-dark);
+}
+
+.linha {
+    width: 100%;
+    height: 4px;
+    background-color: var(--orange);
+    margin: 10px 0;
+}
+
+
+.nos p {
+    color: white;
+    font-family: inherit ;
+    margin-bottom: 20px; 
+}
+
+.img_empresa {
+    text-align: center; 
+    margin-top: -400px; 
+    margin-left: 105%; 
+    
+}
+
+.img_empresa img {
+    width: 420px; 
+    height: 390px; 
+}
+
+
+.btn-sensores {
+    margin-top: 20px; 
+    padding: 10px 50px; 
+    background-color: var(--navy-dark); 
+    color: white;
+    border-radius: 120px; 
+    font-size: 20px; 
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-sensores:hover {
+    background-color: var(--orange); 
+}

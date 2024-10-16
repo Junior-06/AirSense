@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente | AirSense</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/CadastroLogin.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/sobre_nos.css">
+    <link rel="stylesheet" href="sensores.html">
+    <link rel="stylesheet" href="styles/sensores.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo" href="./index.html">AIRSENSE</a>
+            <ul class="navbar">
+                <li>
+                    <a href="login.html">Login</a>
+                </li>
+                <li>
+                    <a href="sobre-nos.html">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="projetos.html">Nossos Projetos</a>
+                </li>
+                <li>
+                    <a href="sensores.html">Sensores</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="section-main">
+        <div class="container">
+            <div class="cadastro metade">
+                <div class="form">
+                    <h2 class="text-cadastro">Cadastro</h2>
+                    <div class="empresa-nome campo">
+                        <h4>Nome da Empresa: </h4>
+                        <input class="input" type="text">
+                    </div>
+    
+                    <div class="empresa-email campo">
+                        <h4>Email Empresarial: </h4>
+                        <input class="input" type="email">
+                    </div>
+                    <div class="empresa-cnpj campo">
+                        <h4>CNPJ: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-phone campo">
+                        <h4>Telefone: </h4>
+                        <input class="input" type="tel">
+                    </div>
+                    <div class="empresa-cep campo">
+                        <h4>CEP: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-uf campo">
+                        <h4>Cidade: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-rua campo">
+                        <h4>Rua: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-num campo">
+                        <h4>Número: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-bairro campo">
+                        <h4>Bairro: </h4>
+                        <input class="input" type="text">
+                    </div>
+                    <div class="empresa-complemento campo">
+                        <h4>Complemento:     </h4>
+                        <input class="input" type="text">
+                    </div>
+                </div>
+                <br>
+                    
+                    <button class="button" onclick="CadastroCliente()">Cadastrar</button>
+            </div>
+            <div class="marketing metade">
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a class="logo" href="./index.html">AIRSENSE</a>
+            
+            <ul class="navbar1">
+                <li>
+                    <img src="img/instagram_iconi.png" class="icones">
+                    <a href="arsense@company">arsense@company</a>
+                </li>
+                <li>
+                    <img src="img/facebook_icone1.png" class="icones">
+                    <a href="arsense@company">arsense@company</a>
+                </li>
+                <li>
+                    <img src="img/tiktok_icone.png" class="icones">
+                    <a href="arsense@company">arsense@company</a>
+                </li>
+            </ul>
+            <p>Precisa de ajuda? <br> Entre em contato: <br >  <a href="arsense@company">airsense.company@exemplo.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    function CadastroCliente() {
+        alert('Cliente cadastrado com sucesso!');
+
+        const NomeUsuario = InpNomeUsuario.value
+        console.log(NomeUsuario);
+        const Usuario = InpUsuario.value
+        console.log(Usuario);
+        const EmailUsuario = InpEmailUsuario.value
+        console.log(EmailUsuario);
+        const SenhaUsuario = InpSenhaUsuario.value
+        console.log(SenhaUsuario);
+
+
+        
+    }
+</script>

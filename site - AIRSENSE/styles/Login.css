@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+.Login{
+    height: calc(100vh - 88px);
+    background-image:  url(https://i.imgur.com/0uuil5s.png);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FundoLogin {
+    width: 400px;
+    height: 500px;
+    background: #004AAD; 
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; 
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.icon {
+    width: 70px;
+    height: 105px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    border: 2px solid #000;
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #F5A623;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button img {
+    width: 20px; 
+    height: 20px; 
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #FFA500;
+}
+.FundoLogin .Caixa_interações{
+    margin-top: 90px;
+}
+
+.Caixa_interações{
+    align-items: center;
+}
+
+.Caixa_interações .registreSe:hover{
+    color: orange;
+    text-shadow: 1px 1px 2px rgb(67, 58, 58);
+    cursor: pointer;
+    transition: 0.3s, ease-in-out;
+    transition-property: color, text-shadow;
+}
+
+.Caixa_interações .quest_registreSe{
+    margin-top: 20px;
+    margin-left:10px ;
+    justify-content: center;
+}
+.blur-black{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.579);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

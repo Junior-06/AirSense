@@ -1,0 +1,61 @@
+header {
+    height: 88px;
+    background-color: var(--navy);
+    border-bottom: 2px solid var(--orange);
+}
+
+header .logo {
+    font-size: 30px;
+    color: white;
+    font-family: "Montserrat";
+    font-weight: bold;
+    transition: 0.3s, ease-in-out;
+    transition-property: color;
+}
+
+header .logo:hover {
+    color: orange;
+    
+}
+
+header .container  {
+    height: 100%;
+    margin: 0 125px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar a {
+    color: white;
+    transition: 0.3s, ease-in-out;
+    transition-property: color, text-shadow;
+}
+
+header .navbar a:hover {
+    color: orange;
+    text-shadow: 1px 1px 2px rgb(67, 58, 58);
+}
+
+header .navbar{
+    display: flex;
+    justify-content:space-between ; 
+    align-items: center;
+    gap: 20px ;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gap: UTILIZADO PARA FAZER ESPACAMENTO ENTRE OS FILHOS DE UM ELEMENTO PAI */
+ 

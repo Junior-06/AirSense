@@ -1,0 +1,109 @@
+body {
+    background-color: white;
+}
+
+section {
+    flex: 1; 
+    display: flex;
+}
+section .container{
+    height: 100%;
+    display: flex;
+    max-width: none;
+}
+
+section .metade {
+    width: 50%; 
+}
+
+section .cadastro {
+    display: flex;
+    flex-direction: column;
+    margin: 0 125px;
+    color: var(--navy-dark);
+}
+
+section .cadastro .form {
+    width: fit-content;
+    margin: 32px 0;
+    display: grid;
+    gap: 15px;
+    column-gap: 50px;
+    grid-template-columns: 3fr 1fr 1fr; /* Primeira coluna maior para acomodar campos longos */
+    grid-template-areas: 
+        "titulo titulo titulo"
+        "nome nome nome"
+        "email email email"
+        "cnpj phone phone"
+        "cep cidade cidade"
+        "rua rua num"
+        "bairro complemento complemento";
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.text-cadastro {grid-area: titulo}
+
+.empresa-nome {grid-area: nome}
+
+.empresa-email {grid-area: email}
+
+.empresa-cnpj {grid-area: cnpj}
+
+.empresa-phone {grid-area: phone}
+
+.empresa-cep {grid-area: cep}
+
+.empresa-uf {grid-area: cidade}
+
+.empresa-rua {grid-area: rua}
+
+.empresa-num {grid-area: num}
+
+.empresa-bairro {grid-area: bairro}
+
+.empresa-complemento {grid-area: complemento}
+    
+section .marketing {
+    background-image: url(../img/img_cadastro.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+.input {
+    width: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--orange);
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 4px 0 4px 10px;
+}
+
+.input:focus-visible {
+    border: 2px solid var(--cyan);
+}
+
+
+.button {
+    background-color: #012340;
+    border: 2px solid var(--cyan);
+    color: white; 
+    border-radius: 15px;
+    height: 50px;
+    padding: 6px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    color: var(--orange);
+    background-color: #E6E4E9;
+    border-color: var(--orange);
+    border: 2px solid var(--orange);
+}

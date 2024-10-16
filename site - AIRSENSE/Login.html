@@ -9,10 +9,11 @@
         rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="styles/Login.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/Login.css">
+ 
 </head>
 
 <body>
@@ -32,9 +33,6 @@
                 <li>
                     <a href="sensores.html">Sensores</a>
                 </li>
-                <li>
-                    <a href="Cadastro.html">Cadastro</a>
-                </li>
             </ul>
         </div>
     </header>
@@ -42,39 +40,41 @@
     <div class="FundoLogin">
         <h1>LOGIN</h1>
         <div class="icon">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" alt="User Icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/4312/4312094.png" alt="User Icon">
         </div>
 
         <div class="Caixa_interações">
 
             <input type="text" placeholder="Usuário">
-<<<<<<< HEAD
 
-            <div>
-            <img src="https://www.svgrepo.com/show/380007/eye-password-hide.svg" class="eyeIcon">
-            <input class="password" type="password" placeholder="Senha" >
-        </div>
-
-            <button type="submit">
-                Entrar             
-            </button>
-
-            <p class="quest_registreSe">Não tem uma conta?<span class="registreSe">registre-se</span> </p>
-        </div>
-=======
-            <input type="password" placeholder="Senha">
+            <div class="mostrarSenha">
+                <input class="password" type="password" placeholder="Senha" id="input_senha">
+                <img src="https://www.svgrepo.com/show/380007/eye-password-hide.svg" class="eyeIcon" onclick="mostrarSenha()">
+        </div> <br> 
 
             <button type="submit">
                 Entrar             
             </button>
 
-            <p class="quest_registreSe">Não tem uma conta?<span class="registreSe">registre-se</span> </p>
-        </div>
->>>>>>> 2d4e111486e68c05730127d6cfc325259172a8d2
+            <p class="quest_registreSe">Não tem uma conta?<a  href="Cadastro.html" class="registreSe" style="color: white; color: orange;
+    text-shadow: 1px 1px 2px rgb(67, 58, 58);"> registre-se</a> </p>
     </div>
     </div>
     </div>
 </div>
 </body>
-
 </html>
+<script>
+    function mostrarSenha(){
+        let Senha = input_senha
+
+        if(
+            input_senha.type === "password"
+        ){
+            input_senha.type = "text"
+        }
+        else{
+            input_senha.type = "password"
+        }
+    }
+</script>

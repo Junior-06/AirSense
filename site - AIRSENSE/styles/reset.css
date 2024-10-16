@@ -17,6 +17,10 @@
     --platinum: #E6E4E9;
 }
 
+section {
+    height: calc(100vh - 88px);
+}
+
 body {
     height: 100vh;
     background-color: var(--platinum);

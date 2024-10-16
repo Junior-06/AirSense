@@ -1,19 +1,25 @@
 .nos {
-    height: 550px;
-    flex: 1; 
     background-color: var(--cinza);
 }
 
-
 .nos .container {
-  padding: 50px 60px; 
-  max-width: 900px; 
-  margin: 0;  
-  bottom: 0; 
-  left: 0; 
-    
-
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.nos .content {
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    max-width: 900px;
+}
+
+.nos .img_empresa {
+    height: fit-content;
+}
+
 .nos h1 {
     color: white;
     text-align: left; 
@@ -40,13 +46,6 @@
     margin-bottom: 20px; 
 }
 
-.img_empresa {
-    text-align: center; 
-    margin-top: -400px; 
-    margin-left: 105%; 
-    
-}
-
 .img_empresa img {
     width: 420px; 
     height: 390px; 
@@ -61,6 +60,7 @@
     border-radius: 120px; 
     font-size: 20px; 
     transition: background-color 0.3s ease-in-out;
+    width: fit-content;
 }
 
 .btn-sensores:hover {

@@ -27,7 +27,7 @@
 
 .sensor-text {
     flex: 1; 
-    color: white;
+    color: var(--platinum);
 }
 
 .sensor h1 {
@@ -59,7 +59,7 @@
     padding: 10px 50px; 
     text-align: center;
     background-color: var(--navy-dark); 
-    color: white;
+    color: var(--platinum);
     border-radius: 120px; 
     font-size: 20px; 
     transition: background-color 0.3s ease-in-out;

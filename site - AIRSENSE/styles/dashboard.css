@@ -1,35 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    box-sizing: border-box;
-    font-family: 'Inter';
-    --gray_text: #434343;
-    --light_gray: #C3C3C3;
-    color: var(--gray_text, #434343);
-}
-
-body {
-    height: 100vh;
-}
-
-.container {
-    height: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-h1 {
-    color: #FFF;
-    font-family: 'Montserrat';
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 800;
-    line-height: normal;
-}
 
 h2 {
     font-size: 32px;
@@ -44,20 +12,6 @@ h3 {
 h4 {
     font-size: 14px;
     font-weight: 800;
-}
-
-header {
-    height: 88px;
-    border-bottom: 2px solid #F70;
-    background-color: #004AAD;
-    padding: 0 125px;
-}
-
-header .container {
-    display: flex;
-    
-    align-items: center;
-    justify-content: space-between;
 }
 
 header .user {
@@ -134,10 +88,9 @@ header .user .username {
 
 .section-main .container .top {
     display: flex;
-    gap: 36px;
+    gap: 16px;
     justify-content: space-between;
-    margin-top: 54px;
-    margin-bottom: 36px;
+    margin: 54px 18px 36px 18px;
     width: 100%;
 }
 

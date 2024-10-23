@@ -50,6 +50,7 @@ var sensorTemp = new Chart(document.getElementById('grafico-temperatura').getCon
 
 var paginacao = {};
 var tempo = {};
+var maxRequest = 0
 
 function obterDados(grafico, endpoint) {
     fetch('http://localhost:3300/sensores/' + endpoint)
@@ -78,11 +79,13 @@ function obterDados(grafico, endpoint) {
                 grafico.update();
             });
         })
-        .catch(error => console.error('Erro ao obter dados:', error));
+        .catch(error => {console.error('Erro ao obter dados:', error); maxRequest++} );
 }
 
 
-setInterval(() => {
-    obterDados(sensorTemp,'temperatura');
-    obterDados(sensorUmi,'umidade');
-}, 1000);
+if(maxRequest <= 10){
+    setInterval(() => {
+        obterDados(sensorTemp,'temperatura');
+        obterDados(sensorUmi,'umidade');
+    }, 1000);
+}

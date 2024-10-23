@@ -13,11 +13,12 @@
     <link rel="stylesheet" href="styles/Login.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/header.css">
- 
+    <link rel="stylesheet" href="styles/footer.css">
+
 </head>
 
 <body>
-    
+
     <header>
         <div class="container">
             <a class="logo" href="./index.html">AIRSENSE</a>
@@ -30,66 +31,110 @@
             </ul>
         </div>
     </header>
- <div class="Login">
-    <div class="FundoLogin">
-        <h1>LOGIN</h1>
-        <div class="icon">
-            <img src="https://cdn-icons-png.flaticon.com/512/4312/4312094.png" alt="User Icon">
-        </div>
+    <div class="Login">
+        <div class="FundoLogin">
+            <h1>LOGIN</h1>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/4312/4312094.png" alt="User Icon">
+            </div>
 
-        <div class="Caixa_interações">
+            <div class="Caixa_interações">
 
-            <input type="text" placeholder="Usuário">
+                <input type="text" placeholder="Usuário" id="input_usuario">
 
-            <div class="mostrarSenha">
-                <input class="password" type="password" placeholder="Senha" id="input_senha">
-                <img src="https://www.svgrepo.com/show/380007/eye-password-hide.svg" class="eyeIcon" onclick="mostrarSenha()">
-        </div> <br> 
+                <div class="mostrarSenha">
+                    <input class="password" type="password" placeholder="Senha" id="input_senha">
+                    <img src="https://www.svgrepo.com/show/380007/eye-password-hide.svg" class="eyeIcon"
+                        onclick="mostrarSenha()">
+                </div> <br>
 
-            <button type="submit">
-                Entrar             
-            </button>
+                <div id="div_erro" style="color: red; margin-bottom: 8px;margin-left: 5px;"></div>
 
-            <p class="quest_registreSe">Não tem uma conta?<a  href="Cadastro.html" class="registreSe" style="color: white; color: orange;
+                <button type="submit" onclick="entrar()">
+                    Entrar
+                </button>
+
+                <p class="quest_registreSe">Não tem uma conta?<a href="Cadastro.html" class="registreSe" style="color: white; color: orange;
     text-shadow: 1px 1px 2px rgb(67, 58, 58);"> registre-se</a> </p>
+            </div>
+        </div>
     </div>
     </div>
-    </div>
-</div>
 
-<footer>
-    <div class="container">
-        <a class="logo" href="./index.html">AIRSENSE</a>
-        <ul class="navbar">
-            <li>
-                <img src="img/index/instagram-icon.png" class="icones">
-                <a href="#">airsense@company</a>
-            </li>
-            <li>
-                <img src="img/index/facebook-icon.svg" class="icones">
-                <a href="#">airsense@company</a>
-            </li>
-            <li>
-                <img src="img/index/tiktok-icon.svg" class="icones">
-                <a href="#">airsense@company</a>
-            </li>
-        </ul>
-        <p>Precisa de ajuda? <br> Entre em contato: <br><a href="mailto:suporte@airsense.com">suporte@airsense.com</a></p>
-    </div>
-</footer>
+    <footer>
+        <div class="container">
+            <a class="logo" href="./index.html">AIRSENSE</a>
+            <ul class="navbar">
+                <li>
+                    <img src="img/index/instagram-icon.png" class="icones">
+                    <a href="#">airsense@company</a>
+                </li>
+                <li>
+                    <img src="img/index/facebook-icon.svg" class="icones">
+                    <a href="#">airsense@company</a>
+                </li>
+                <li>
+                    <img src="img/index/tiktok-icon.svg" class="icones">
+                    <a href="#">airsense@company</a>
+                </li>
+            </ul>
+            <p>Precisa de ajuda? <br> Entre em contato: <br><a
+                    href="mailto:suporte@airsense.com">suporte@airsense.com</a></p>
+        </div>
+    </footer>
 </body>
 </html>
 <script>
-    function mostrarSenha(){
+    function mostrarSenha() {
         let Senha = input_senha
 
-        if(
+        if (
             input_senha.type === "password"
-        ){
+        ) {
             input_senha.type = "text"
         }
-        else{
+        else {
             input_senha.type = "password"
         }
     }
+
+    function entrar() {
+        const usuario = input_usuario.value
+        const senhaUsuario = input_senha.value
+
+        const usuarioPadrao = "Usuario@airsense.com"
+        const senhaPadrao = "Airsense!123"
+
+        let contadorNumeros = 0
+        let caractereAtual = ""
+
+        for (let posiçãoCaractere = 0;
+            posiçãoCaractere < senhaUsuario.length;
+            posiçãoCaractere++
+        ) {
+            caractereAtual = senhaUsuario[posiçãoCaractere]
+
+            if (caractereAtual == "1" || caractereAtual == "2" || caractereAtual == "3" || caractereAtual == "4" || 
+            caractereAtual == "5" || caractereAtual == "6" || caractereAtual == "7" || caractereAtual == "8" || 
+            caractereAtual == "9") { 
+                contadorNumeros++   
+            }
+        }
+
+        if (contadorNumeros < 3) {
+            div_erro.innerHTML = `A senha deve conter 3 Números!`
+        }
+
+        else {
+            if (usuario == usuarioPadrao && senhaUsuario == senhaPadrao) {
+                window.location.href = "dashboard.html"
+            }
+            else {
+                div_erro.innerHTML = `A senha esta incorreta!`
+            }
+        }
+
+    }
+
+
 </script>

@@ -83,9 +83,10 @@ function obterDados(grafico, endpoint) {
 }
 
 
-if(maxRequest <= 10){
-    setInterval(() => {
+setInterval(() => {
+    if(maxRequest <= 10){
         obterDados(sensorTemp,'temperatura');
         obterDados(sensorUmi,'umidade');
-    }, 1000);
-}
+    }
+}, 1000);
+

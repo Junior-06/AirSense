@@ -27,8 +27,14 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
 }
 
 .blur-black {

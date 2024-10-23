@@ -141,6 +141,7 @@ header .user .username {
 }
 
 .section-main .bottom .grafico {
+    height: fit-content;
     padding: 15px;
     display: flex;
     align-items: center;

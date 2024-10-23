@@ -15,27 +15,21 @@
 <body>
     <header>
         <div class="container">
-            <a class="logo" href="index.html">AIRSENSE</a>
+            <a class="logo" href="./index.html">AIRSENSE</a>
             <ul class="navbar">
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-                <li>
-                    <a href="simulador_financeiro.html">Simulador</a>
-                </li>
-                <li>
-                    <a href="sobre_nos.html">Sobre nos</a>
-                </li>
-                <li>
-                    <a href="sensores.html">Sensores</a>
-                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="sobre_nos.html">Sobre nós</a></li>
+                <li><a href="simulador_financeiro.html">Simulador</a></li>
+                <li><a href="Cadastro.html">Cadastro</a></li>
+                <li><a href="sensores.html">Sensores</a></li>
             </ul>
         </div>
     </header>
+
     <section class="section-main">
         <div class="container">
             <div class="cadastro metade">
-                <div class="form">
+                <div id="div_form" class="form">
                     <h2 class="text-cadastro">Cadastro</h2>
                     <div class="empresa-nome campo">
                         <h4>Nome da Empresa: </h4>
@@ -78,10 +72,8 @@
                         <h4>Complemento:     </h4>
                         <input class="input" type="text">
                     </div>
+                    <button id="btn-main" class="button" onclick="senhaCadastrar()">Cadastrar</button>
                 </div>
-                <br>
-                    
-                    <button class="button" onclick="CadastroCliente()">Cadastrar</button>
             </div>
             <div class="marketing metade">
 
@@ -114,16 +106,19 @@
 </html>
 
 <script>
-    function CadastroCliente() {
-        alert('Cliente cadastrado com sucesso!');
-
-        const NomeUsuario = InpNomeUsuario.value
-        console.log(NomeUsuario);
-        const Usuario = InpUsuario.value
-        console.log(Usuario);
-        const EmailUsuario = InpEmailUsuario.value
-        console.log(EmailUsuario);
-        const SenhaUsuario = InpSenhaUsuario.value
-        console.log(SenhaUsuario);
+    function senhaCadastrar() {
+        div_form.innerHTML = `
+        <h2 class="text-cadastro">Insira sua senha</h2>
+        <div class="senha campo">
+            <h4>Senha: </h4>
+            <input class="input" type="password">
+        </div>
+        <div class="senhaConfirm campo">
+            <h4>Confirme sua senha: </h4>
+            <input class="input" type="password">
+        </div>
+        <button id="btn-main" class="button" onclick="cadastrar()">Cadastrar</button>
+        `
+        div_form.classList.add("password") 
     }
 </script>

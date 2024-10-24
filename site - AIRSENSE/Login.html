@@ -40,7 +40,7 @@
 
             <div class="Caixa_interações">
 
-                <input type="text" placeholder="Usuário" id="input_usuario">
+                <input type="text" placeholder="E-mail ou Usuário" id="input_usuario">
 
                 <div class="mostrarSenha">
                     <input class="password" type="password" placeholder="Senha" id="input_senha">
@@ -83,6 +83,7 @@
         </div>
     </footer>
 </body>
+
 </html>
 <script>
     function mostrarSenha() {
@@ -99,14 +100,23 @@
     }
 
     function entrar() {
+        const emailUsuario = input_usuario.value
         const usuario = input_usuario.value
         const senhaUsuario = input_senha.value
 
-        const usuarioPadrao = "Usuario@airsense.com"
+        const emailPadrão = "Usuario@airsense.com"
+        const usuarioPadrao = "Usuario"
         const senhaPadrao = "Airsense!123"
 
         let contadorNumeros = 0
         let caractereAtual = ""
+
+        if (usuario == "") {
+            return div_erro.innerHTML = `Digite um E-mail ou Usuário`
+        }
+        else if (senhaUsuario == "") {
+            return div_erro.innerHTML = `Digite uma Senha`
+        }
 
         for (let posiçãoCaractere = 0;
             posiçãoCaractere < senhaUsuario.length;
@@ -114,22 +124,23 @@
         ) {
             caractereAtual = senhaUsuario[posiçãoCaractere]
 
-            if (!isNaN(Number(usuario[posiçãoCaractere]))) { 
-                contadorNumeros++   
+            if (!isNaN(Number(senhaUsuario[posiçãoCaractere]))) {
+                contadorNumeros++
             }
         }
 
         if (contadorNumeros < 1) {
             div_erro.innerHTML = `A senha deve conter 3 Números!`
+            return
         }
 
         else {
-            if (usuario == usuarioPadrao && senhaUsuario == senhaPadrao) {
-                window.location.href = "dashboard.html"
+            if ((usuario != usuarioPadrao || emailUsuario != emailPadrão) && senhaUsuario != senhaPadrao) {
+                return div_erro.innerHTML = `Login ou senha inválido`
+ 
             }
-            else {
-                div_erro.innerHTML = `A senha esta incorreta!`
-            }
+
+            window.location.href = "dashboard.html"
         }
 
     }

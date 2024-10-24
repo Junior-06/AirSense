@@ -126,9 +126,31 @@ div.form.password {
     "titulo titulo titulo"
     "senha senha senha"
     "confirm confirm confirm"
+    "passWarnings passWarnings passWarnings"
     "btn btn btn";
 }
 
 div.form.password .input {
     padding: 8px 0 8px 10px;
+}
+
+.password-warnings {
+    grid-area: passWarnings;
+    gap: 10px;
+}
+
+p.invalid {
+    color: #EC3737;
+}
+
+p.valid {
+    color: #29625B;
+}
+
+input.valid {
+    border-color: #29625B;
+}
+
+input.invalid {
+    border-color: #EC3737;
 }

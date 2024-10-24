@@ -20,7 +20,6 @@
                 <li><a href="login.html">Login</a></li>
                 <li><a href="sobre_nos.html">Sobre nós</a></li>
                 <li><a href="simulador_financeiro.html">Simulador</a></li>
-                <li><a href="Cadastro.html">Cadastro</a></li>
                 <li><a href="sensores.html">Sensores</a></li>
             </ul>
         </div>
@@ -95,13 +94,14 @@
                     <a href="#">airsense@company</a>
                 </li>
                 <li>
-                    <img src="img/index/tiktok-icon.svg" class="icones">
+                    <img src="img/index/tiktok-icon.svg" class="icones" onke>
                     <a href="#">airsense@company</a>
                 </li>
             </ul>
             <p>Precisa de ajuda? <br> Entre em contato: <br><a href="mailto:suporte@airsense.com">suporte@airsense.com</a></p>
         </div>
     </footer>
+
 </body>
 </html>
 
@@ -111,14 +111,106 @@
         <h2 class="text-cadastro">Insira sua senha</h2>
         <div class="senha campo">
             <h4>Senha: </h4>
-            <input class="input" type="password">
+            <input id="inp_password" class="input" type="password" onkeyup="verificarRegras()">
         </div>
         <div class="senhaConfirm campo">
             <h4>Confirme sua senha: </h4>
-            <input class="input" type="password">
+            <input id="inp_confirmPass" class="input" type="password" onkeyup="verificarRegras()">
+        </div>
+        <div class="password-warnings">
+            <p id="p_confirmPass" class="valid"></p>
+            <br>
+            <h3>A senha tem que conter:</h3>
+            <br>
+            <ul>
+                <li><p class="passRule" id="p_vali_nove">9 caracteres</p></li>
+                <li><p class="passRule" id="p_vali_maisculo">Um caracter maiusculo</p></li>
+                <li><p class="passRule" id="p_vali_num">Um numero</p></li>
+                <li><p class="passRule" id="p_vali_especial">Um caracter especial</p></li>
+            </ul>
         </div>
         <button id="btn-main" class="button" onclick="cadastrar()">Cadastrar</button>
         `
         div_form.classList.add("password") 
+    }
+
+    function cadastrar() {
+        if(verificarRegras()){
+            window.location.href = 'login.html'
+        }
+    }
+
+    function verificarConfirmacao(password) {
+        const passConf = inp_confirmPass.value
+
+        var estadoAdicionado = ''
+        var estadoRemovido = ''
+
+        if(password != passConf){
+            estadoAdicionado = 'invalid'
+            estadoRemovido = 'valid'
+            p_confirmPass.innerHTML = 'As senhas inseridas não são iquais'
+        } else {
+            estadoAdicionado = 'valid'
+            estadoRemovido = 'invalid'
+            p_confirmPass.innerHTML = 'As senhas são iquais'
+        }
+        p_confirmPass.classList.remove(estadoRemovido)
+        p_confirmPass.classList.add(estadoAdicionado)
+        inp_confirmPass.classList.remove(estadoRemovido)
+        inp_confirmPass.classList.add(estadoAdicionado)
+        inp_password.classList.remove(estadoRemovido)
+        inp_password.classList.add(estadoAdicionado)
+    }
+
+    function verificarRegras(){
+        const password = inp_password.value
+        
+        var contemCharEspecial = 'red'
+        var contemCharNumero = 'red'
+        var contemCharMaisculo = 'red'
+        var contemNoveChars = password.length >= 9 ? 'green' : 'red'
+
+
+        if(password == ''){
+            contemCharEspecial = 'gray'
+            contemCharNumero = 'gray'
+            contemCharMaisculo = 'gray'
+            contemNoveChars = 'gray'
+            p_confirmPass.innerHTML = ''
+        } else {
+            verificarConfirmacao(password)
+            const asciiEspeciais = `!"#$%&'()*+-,@./:;<=>?[\\]^_\`{|}~`
+    
+            for(let i = 0; i< password.length;i++){
+                if(asciiEspeciais.indexOf(password[i]) >= 0){
+                    contemCharEspecial = 'green'  
+                } 
+                else if (!isNaN(Number(password[i]))){
+                    contemCharNumero = 'green'
+                }
+                else if (
+                    password.charCodeAt(i) >= 65  && 
+                    password.charCodeAt(i) <= 90 || 
+                    password[i] == 'Ç'
+                )  {
+                    contemCharMaisculo = 'green'
+                }
+            }
+        }
+
+        p_vali_especial.style = `color: ${contemCharEspecial}`
+        p_vali_num.style = `color: ${contemCharNumero}`
+        p_vali_maisculo.style = `color: ${contemCharMaisculo}`
+        p_vali_nove.style = `color: ${contemNoveChars}`
+
+        if(contemCharNumero   == 'green' &&
+           contemCharEspecial == 'green' &&
+           contemCharMaisculo == 'green' &&
+           contemNoveChars    == 'green'
+        ){
+            return true
+        }
+        return false
     }
 </script>

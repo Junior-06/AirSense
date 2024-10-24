@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="styles/Login.css">
+    <link rel="stylesheet" href="styles/login.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -114,14 +114,12 @@
         ) {
             caractereAtual = senhaUsuario[posiçãoCaractere]
 
-            if (caractereAtual == "1" || caractereAtual == "2" || caractereAtual == "3" || caractereAtual == "4" || 
-            caractereAtual == "5" || caractereAtual == "6" || caractereAtual == "7" || caractereAtual == "8" || 
-            caractereAtual == "9") { 
+            if (!isNaN(Number(usuario[posiçãoCaractere]))) { 
                 contadorNumeros++   
             }
         }
 
-        if (contadorNumeros < 3) {
+        if (contadorNumeros < 1) {
             div_erro.innerHTML = `A senha deve conter 3 Números!`
         }
 

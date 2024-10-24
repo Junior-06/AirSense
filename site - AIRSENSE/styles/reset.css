@@ -15,10 +15,13 @@
     --orange: #EC8305;
     --cinza: rgb(75, 75, 78);
     --platinum: #E6E4E9;
+
+    --green-ok: #29625B;
+    ---red-crit: #EC3737;
 }
 
 section {
-    height: calc(100vh - 88px);
+    min-height: calc(100vh - 68px);
 }
 
 body {

@@ -1,6 +1,6 @@
 .sensor {
     flex: 1; 
-    background-color: var(--cinza);
+    color: var(--platinum);
 }
 
 .sensor .container {
@@ -17,17 +17,19 @@
 .img_sensor {
     flex: 0 0 200px; /* Define uma largura fixa para a imagem */
     margin-right: 88px; /* Espaço entre a imagem e o texto */
+    border: 20px;
 }
 
 .img_sensor img {
    width: 350px;
    height: 350px;
    margin-bottom: 15px;
+   border: 20px;
 }
 
 .sensor-text {
     flex: 1; 
-    color: var(--platinum);
+    color: var(--navy-dark);
 }
 
 .sensor h1 {

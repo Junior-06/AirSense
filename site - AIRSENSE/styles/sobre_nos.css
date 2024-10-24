@@ -1,5 +1,6 @@
+
 .nos {
-    background-color: var(--cinza);
+    background-color: #E6E4E9;
 }
 
 .nos .container {
@@ -21,7 +22,7 @@
 }
 
 .nos h1 {
-    color: white;
+    color: var(--navy-dark);
     text-align: left; 
     font-family: "Montserrat";
     margin-bottom: 20px; 
@@ -41,19 +42,20 @@
 
 
 .nos p {
-    color: white;
+    color: var(--navy-dark);
     font-family: inherit ;
     margin-bottom: 20px; 
 }
 
-.img_empresa img {
-    width: 420px; 
+.img_empresa img { 
     height: 390px; 
+    margin-left: 4%;
+    border-radius: 20px;
 }
 
 
 .btn-sensores {
-    margin-top: 20px; 
+    border-bottom: 20px; 
     padding: 10px 50px; 
     background-color: var(--navy-dark); 
     color: white;
@@ -66,3 +68,4 @@
 .btn-sensores:hover {
     background-color: var(--orange); 
 }
+

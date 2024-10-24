@@ -142,25 +142,25 @@
 
     function verificarConfirmacao(password) {
         const passConf = inp_confirmPass.value
-
+        const listaDeMudanca = [p_confirmPass, inp_confirmPass, inp_password]
         var estadoAdicionado = ''
         var estadoRemovido = ''
 
         if(password != passConf){
             estadoAdicionado = 'invalid'
             estadoRemovido = 'valid'
-            p_confirmPass.innerHTML = 'As senhas inseridas não são iquais'
+            p_confirmPass.innerHTML = 'As senhas inseridas não são iguais.'
         } else {
             estadoAdicionado = 'valid'
             estadoRemovido = 'invalid'
             p_confirmPass.innerHTML = 'As senhas são iquais'
         }
-        p_confirmPass.classList.remove(estadoRemovido)
-        p_confirmPass.classList.add(estadoAdicionado)
-        inp_confirmPass.classList.remove(estadoRemovido)
-        inp_confirmPass.classList.add(estadoAdicionado)
-        inp_password.classList.remove(estadoRemovido)
-        inp_password.classList.add(estadoAdicionado)
+
+        for(let i = 0; i < listaDeMudanca.length; i++){
+            let elemento = listaDeMudanca[i]
+            elemento.classList.add(estadoAdicionado)
+            elemento.classList.remove(estadoRemovido)
+        }
     }
 
     function verificarRegras(){
@@ -178,6 +178,8 @@
             contemCharMaisculo = 'gray'
             contemNoveChars = 'gray'
             p_confirmPass.innerHTML = ''
+            inp_confirmPass.className = 'input'
+            inp_password.className = 'input'
         } else {
             verificarConfirmacao(password)
             const asciiEspeciais = `!"#$%&'()*+-,@./:;<=>?[\\]^_\`{|}~`
